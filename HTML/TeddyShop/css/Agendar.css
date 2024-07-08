@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar .header__logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar .header__logo-container {
+    float: left;
+    padding: 10px;
+}
+
+.navbar .navbar-brand {
+    float: left;
+    color: white;
+    padding: 10px;
+}
+
+.navbar ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+.navbar ul.menu li {
+    float: left;
+}
+
+.navbar ul.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul.menu li a:hover {
+    background-color: #111;
+}
+
+.navbar ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul.menu li:hover ul.submenu {
+    display: block;
+}
+
+.navbar ul.menu li ul.submenu li {
+    float: none;
+}
+
+.navbar ul.menu li ul.submenu li a {
+    padding: 10px 16px;
+}
+
+.logoutt {
+    float: right;
+}
+
+.logout {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #d32f2f;
+}
+
+.content {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.order-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.order-header {
+    background-color: #f1f1f1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.order-details {
+    padding: 10px;
+    background-color: white;
+}
+
+.action-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}

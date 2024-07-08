@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/Estilos.css">
+    <title>Catalogo-peluches.oso</title>
+    <header class="header">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button" aria-label="Abrir menú">=</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="img/LogoTeddyShop.jpg" alt="Logo TeddyShop">
+        </div>
+        <nav class="header__nav">
+            <link rel="stylesheet" href="">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a href="Catalogo.html">Medidas</a></li>
+            </ul>
+        </nav>
+    </header>
+</head>
+<body>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen 2.png" alt="">
+                    </div>
+                    <p class="descripcion"id>Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen 5.png" alt="">
+                    </div>
+                    <p class="descripcion" id>Peluche-80 Cm </p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen 7.png" alt="">
+                    </div>
+                    <P class="descripcion"id>Peluche-80 Cm</P>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen 8.png" alt="">
+                    </div>
+                    <p class="descripcion">Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen 9.png" alt="">
+                    </div>
+                    <p class="descripcion">Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen1.png" alt="">
+                    </div>
+                    <p class="descripcion">Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen3.png" alt="">
+                    </div>
+                    <p class="descripcion">Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img80Cm/imagen4.png" alt="">
+                    </div>
+                    <p class="descripcion">Peluche-80 Cm</p>
+                    <span class="precio">$ 105.000</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="img/imagen 9.png" alt="" id="img">
+                <h2 id="modelo">NIKE MODEL 1</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">$ 130</span>
+
+                <div class="fila">
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <a href="https://api.whatsapp.com/message/ELVZAGRCZJN7I1?autoload=1&app_absent=0%22" class="float-wa" target="_blank">
+        <i class="fa fa-whatsapp" style="margin-top:16px;"></i>
+</body>
+</html>

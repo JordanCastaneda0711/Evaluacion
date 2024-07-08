@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Gerente</title>
+    <link rel="stylesheet" href="css/Vendedor.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/Vendedor.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="header__logo-container">
+                <img class="header__logo" src="img/LogoTeddyShop.jpg" alt="Logo TeddyShop">
+            </div>
+            <div class="navbar-brand">Perfil Vendedor TeddyShop</div>
+            <ul class="menu">
+                <li>
+                    <a href="#" data-target="#Reporte">Generar Reporte De Pedidos <i class="fas fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#" data-target="#Reporte">Reporte De Pedidos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-target="#Agendar">Agendar Pedidos <i class="fas fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#" data-target="#Agendar">Realizar Agendamiento</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-target="#Historial">Historial De Pedidos <i class="fas fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#" data-target="#Historial">Historial</a></li>
+                    </ul>
+                </li>
+                <li class="logoutt">
+                    <button class="logout" onclick="logout()">Cerrar sesión</button>
+                </li>
+                
+                <script>
+                function logout() {
+                    window.location.href = './index.html';
+                }
+                </script>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div data-content id="Reporte">
+            <div class="container">
+                <h1>Agregar Reporte Diario</h1>
+                <form id="reportForm">
+                    <label class="text" for="date">Fecha:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label class="text" for="title">Título:</label>
+                    <input type="text" id="title" name="title" required>
+                    
+                    <label class="text" for="description">Descripción:</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                    
+                    <button type="submit">Agregar Reporte</button>
+                </form>
+                
+                <h1>Reportes Diarios</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportTable">
+                    </tbody>
+                </table>
+                <script src="js/reporte.js"></script>
+            </div>
+        </div>
+
+        <div data-content id="Agendar">
+            <div class="container">
+                <h1>Agendar Pedido</h1>
+                <form id="orderForm">
+                    <label for="orderDate">Fecha:</label>
+                    <input type="date" id="orderDate" name="orderDate" required>
+                    
+                    <label for="orderTime">Hora:</label>
+                    <input type="time" id="orderTime" name="orderTime" required>
+                    
+                    <label for="receiverName">Nombre de quien recibe:</label>
+                    <input type="text" id="receiverName" name="receiverName" required>
+                    
+                    <label for="receiverPhone">Número de quien recibe:</label>
+                    <input type="tel" id="receiverPhone" name="receiverPhone" required>
+                    
+                    <label for="payerName">Nombre de quien paga:</label>
+                    <input type="text" id="payerName" name="payerName" required>
+                    
+                    <label for="payerPhone">Número de quien paga:</label>
+                    <input type="tel" id="payerPhone" name="payerPhone" required>
+                    
+                    <label for="address">Dirección:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                    
+                    <label for="neighborhood">Barrio:</label>
+                    <input type="text" id="neighborhood" name="neighborhood" required>
+                    
+                    <label for="locality">Localidad:</label>
+                    <input type="text" id="locality" name="locality" required>
+                    
+                    <label for="totalAmount">Total:</label>
+                    <input type="number" id="totalAmount" name="totalAmount" step="0.01" required>
+                    
+                    <button type="submit">Agendar Pedido</button>
+                </form>
+            </div>
+
+            <div class="order-list" id="orderList"></div>
+
+            <div class="container hidden" id="editContainer">
+                <h1>Modificar Pedido</h1>
+                <form id="editOrderForm">
+                    <input type="hidden" id="editOrderId">
+                    
+                    <label for="editOrderDate">Fecha:</label>
+                    <input type="date" id="editOrderDate" name="editOrderDate" required>
+                    
+                    <label for="editOrderTime">Hora:</label>
+                    <input type="time" id="editOrderTime" name="editOrderTime" required>
+                    
+                    <label for="editReceiverName">Nombre de quien recibe:</label>
+                    <input type="text" id="editReceiverName" name="editReceiverName" required>
+                    
+                    <label for="editReceiverPhone">Número de quien recibe:</label>
+                    <input type="tel" id="editReceiverPhone" name="editReceiverPhone" required>
+                    
+                    <label for="editPayerName">Nombre de quien paga:</label>
+                    <input type="text" id="editPayerName" name="editPayerName" required>
+                    
+                    <label for="editPayerPhone">Número de quien paga:</label>
+                    <input type="tel" id="editPayerPhone" name="editPayerPhone" required>
+                    
+                    <label for="editAddress">Dirección:</label>
+                    <textarea id="editAddress" name="editAddress" rows="3" required></textarea>
+                    
+                    <label for="editNeighborhood">Barrio:</label>
+                    <input type="text" id="editNeighborhood" name="editNeighborhood" required>
+                    
+                    <label for="editLocality">Localidad:</label>
+                    <input type="text" id="editLocality" name="editLocality" required>
+                    
+                    <label for="editTotalAmount">Total:</label>
+                    <input type="number" id="editTotalAmount" name="editTotalAmount" step="0.01" required>
+                    
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" onclick="cancelEdit()">Cancelar</button>
+                </form>
+            </div>
+
+            <div class="container hidden" id="reportContainer">
+                <h1>Reporte de Pedidos</h1>
+                <button onclick="generateReport()">Generar Reporte</button>
+                <div id="reportContent"></div>
+            </div>
+
+            <script src="js/Agendar.js"></script>
+        </div>
+
+        <div data-content id="Historial">
+            <h1>Historial de Pedidos</h1>
+        
+        <div class="pedido">
+            <h3>Pedido #12345</h3>
+            <p>Fecha: 25 de junio de 2024</p>
+            <div class="detalles">
+                <p><strong>Hora:</strong> 10:00 AM</p>
+                <p><strong>Nombre de quien recibe:</strong> Juan Pérez</p>
+                <p><strong>Número de quien recibe:</strong> 1234567890</p>
+                <p><strong>Nombre de quien paga:</strong> Ana Gómez</p>
+                <p><strong>Número de quien paga:</strong> 9876543210</p>
+                <p><strong>Dirección:</strong> Calle 123 #45-67</p>
+                <p><strong>Barrio:</strong> La Floresta</p>
+                <p><strong>Localidad:</strong> Chapinero</p>
+                <p><strong>Medida del oso:</strong> 1.50cm</p>
+                <p><strong>Total:</strong> $150000</p>
+            </div>
+            <a href="#">Ver detalles</a>
+        </div>
+
+        <div class="pedido">
+            <h3>Pedido #67890</h3>
+            <p>Fecha: 20 de junio de 2024</p>
+            <div class="detalles">
+                <p><strong>Hora:</strong> 11:30 AM</p>
+                <p><strong>Nombre de quien recibe:</strong> María López</p>
+                <p><strong>Número de quien recibe:</strong> 555-1234</p>
+                <p><strong>Nombre de quien paga:</strong> Carlos Ramírez</p>
+                <p><strong>Número de quien paga:</strong> 987-6543</p>
+                <p><strong>Dirección:</strong> Av. Principal #789</p>
+                <p><strong>Barrio:</strong> Los Almendros</p>
+                <p><strong>Localidad:</strong> Usaquén</p>
+                <p><strong>Medida del oso:</strong> 1.80cm</p>
+                <p><strong>Total:</strong> $200000</p>
+            </div>
+            <a href="#">Ver detalles</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>
