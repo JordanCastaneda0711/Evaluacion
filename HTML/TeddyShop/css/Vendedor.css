@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5E6FB;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6B467E;
+    padding: 10px 0;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 77px;
+    margin: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    color: #FFF;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #8C6491;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6B467E;
+    display: none;
+    border-radius: 5px;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu a {
+    padding: 10px 15px;
+    background-color: #6B467E;
+    color: #FFF;
+    border-radius: 0;
+}
+
+.submenu a:hover {
+    background-color: #8C6491;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.logout {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.logout:hover {
+    background-color: #FFC107;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #6B467E;
+}
+
+/* PROPIEDADES DE LAS TABS */
+[data-content]{
+    display: none;
+}
+
+.active[data-content]{
+    display: block;
+}
+
